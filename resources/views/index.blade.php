@@ -28,7 +28,7 @@
                   <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/create">create</a>
+                  <a class="nav-link" href="/admin">create</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -52,14 +52,18 @@
             </div>
         </nav>
 
-  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">🚀 Journey of a Learner</h1>
-      <p class="lead my-3">A space where I document my learning journey and discoveries</p>
-      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Discover More...</a></p>
-    </div>
-  </div>
+        <div class="container mt-5">
+          <div  class="jumbotron p-4 p-md-5 text-white rounded bg-dark d-flex align-items-center custom-bg" 
+          style="background: url('{{ asset('img/alam1.jpg') }}') no-repeat center center / cover;">
+          >
+            <div class="col-md-6">
+              <h1 class="display-4 font-italic">🚀 Journey of a Learner</h1>
+              <p class="lead my-3">A space where I document my learning journey and discoveries</p>
+              <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Discover More...</a></p>
+            </div>
+          </div>
 
+          <h2>what i have explored : </h2>
   
   <div class="row mb-2">
       {{-- blog --}}
@@ -81,17 +85,12 @@
           </div>
       </div>
   @endforeach
-  
-  
-    
   </div>
 </div>
 
 
 
-
-
-
+</div>
         </div>
 
 
