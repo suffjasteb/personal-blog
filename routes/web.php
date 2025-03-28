@@ -1,13 +1,20 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [PostController::class, 'index'])->name('posts.index');
 
+Route::get('/create', [PostController::class, 'create'])
+    ->middleware('auth') // Proteksi halaman create agar hanya bisa diakses oleh user yang login
+    ->name('posts.create');
 
-Route::get('/', [PostController::class,'index'])->name('posts.index');
-Route::get('/create', [PostController::class,'create'])->name('posts.create');
-Route::post('/store', [PostController::class,'store'])->name('posts.store');
-Route::get('/admin', function() {
-    return view('admin');
-});
+Route::post('/store', [PostController::class, 'store'])->name('posts.store');
+
+// Route untuk login
+Route::get('/admin', [AuthController::class, 'showLoginForm'])->name('login'); 
+Route::post('/admin', [AuthController::class, 'login']);
+
+// Route untuk logout
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

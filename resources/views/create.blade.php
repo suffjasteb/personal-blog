@@ -72,10 +72,17 @@
                     <input type="file" name="image" class="form-control-file">
                 </div>
                 <button type="submit" class="btn btn-primary">Create Post</button>
+              </form>
             </form>
+             {{-- logout --}}
+             <form action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button type="submit">Logout</button>
         </div>
     </div>
 
+   
+  
     
 </body>
 </html>
