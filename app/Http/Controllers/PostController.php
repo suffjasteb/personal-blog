@@ -35,6 +35,7 @@ class PostController extends Controller
             'title' => 'required',
             'content' => 'required',
             'category' => 'required',
+            'author_name' => 'required',
             'image' => 'nullable|image|max:2048'
         ]);
 
@@ -45,6 +46,7 @@ class PostController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'category' => $request->category,
+            'author_name' => $request->author_name,
             'image' => $imagePath,
         ]);
 
@@ -54,9 +56,9 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Post $post)
     {
-        //
+        return view('posts.show', compact('post'));
     }
 
     /**

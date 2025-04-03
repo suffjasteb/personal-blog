@@ -11,5 +11,10 @@ class Post extends Model
 
     use HasFactory;
     //
-    protected $fillable = ['title', 'slug', 'content', 'category', 'image'];
+    protected $fillable = ['title', 'author_name' ,'slug', 'content', 'category', 'image'];
+
+    public function author() {
+        return $this->belongsTo(User::class, 'user_id');
+        // belongsTo(User::class, 'user_id') → Artinya setiap postingan hanya punya satu author, yang diambil dari user_id.
+    }
 }

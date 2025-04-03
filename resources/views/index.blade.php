@@ -78,9 +78,10 @@
               <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-primary">{{ $post->category ?? 'Uncategorized' }}</strong>
                   <h3 class="mb-0">{{ $post->title }}</h3>
+                  <p><strong>Author:</strong> {{ $post->author_name }}</p>
                   <div class="mb-1 text-muted">{{ $post->created_at->format('M d, Y') }}</div>
                   <p class="card-text mb-auto">{{ Str::limit($post->content, 100) }}</p>
-                  <a href="#" class="stretched-link">Continue reading</a>
+                  <a href="{{ route('posts.show', $post->id) }}">Continue reading</a>
               </div>
           </div>
       </div>

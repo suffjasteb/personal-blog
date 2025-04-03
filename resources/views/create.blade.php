@@ -60,6 +60,10 @@
                     <input type="text" name="title" class="form-control" required>
                 </div>
                 <div class="form-group">
+                  <label>Author</label>
+                  <input type="text" name="author" class="form-control" required>
+              </div>
+                <div class="form-group">
                     <label>Content</label>
                     <textarea name="content" class="form-control" rows="5" required></textarea>
                 </div>

@@ -18,3 +18,9 @@ Route::post('/admin', [AuthController::class, 'login']);
 
 // Route untuk logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+
+
+// /posts/{id} → {id} adalah parameter untuk menangkap ID postingan yang diklik.
+// PostController@show → Nanti fungsi show() di PostController akan menangani permintaan ini.
