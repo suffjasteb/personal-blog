@@ -54,14 +54,14 @@
             {{-- form --}}
     
             <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
-                @csrf
+              @csrf
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" name="title" class="form-control" required>
                 </div>
                 <div class="form-group">
                   <label>Author</label>
-                  <input type="text" name="author" class="form-control" required>
+                  <input type="text" name="author_name" class="form-control" required>
               </div>
                 <div class="form-group">
                     <label>Content</label>

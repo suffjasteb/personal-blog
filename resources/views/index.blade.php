@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -42,7 +42,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled">Disabled</a>
+                  <a class="nav-link disabled" href="/about">About</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -68,32 +68,55 @@
   <div class="row mb-2">
       {{-- blog --}}
       @foreach ($posts as $post)
-      <div class="col-md-6">
+      <div class="col-md-6 d-flex align-items-center">
           <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               @if ($post->image)
                   <div class="col-auto">
-                      <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid" style="max-height: 200px; width: auto;" alt="{{ $post->title }}">
+                    <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top img-fluid" style="max-height: 200px; object-fit: cover;" alt="{{ $post->title }}">
                   </div>
               @endif
-              <div class="col p-4 d-flex flex-column position-static">
+              <div class="card-body d-flex flex-column">
                   <strong class="d-inline-block mb-2 text-primary">{{ $post->category ?? 'Uncategorized' }}</strong>
                   <h3 class="mb-0">{{ $post->title }}</h3>
                   <p><strong>Author:</strong> {{ $post->author_name }}</p>
                   <div class="mb-1 text-muted">{{ $post->created_at->format('M d, Y') }}</div>
-                  <p class="card-text mb-auto">{{ Str::limit($post->content, 100) }}</p>
-                  <a href="{{ route('posts.show', $post->id) }}">Continue reading</a>
+                  <a href="{{ route('posts.show', $post->id) }}" class="mt-auto btn btn-primary">Continue reading</a>
+              </div>
+              {{-- deskripsi --}}
+              <div class="container" >
+                <p class="card-text mb-auto">{{ Str::limit($post->content, 300) }}</p>
               </div>
           </div>
       </div>
   @endforeach
   </div>
 </div>
-
-
-
 </div>
-        </div>
 
+<hr>
+
+{{-- profile --}}
+<div class="container my-5" style="   display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 50px auto;">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="{{asset('img/profile.jpeg')}}" alt="My Photo" class="img-fluid rounded">
+    </div>
+    <div class="col-md-6 profile-text">
+      <p>
+        Shafwan is an entrepreneur, developer, and content creator based in Sidoarjo. 
+                He shares his journey of tech, business, and self-improvement.
+      </p>
+      <a href="/about" class="read-more">READ MORE</a>
+    </div>
+  </div>
+</div>
+
+        </div>
 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

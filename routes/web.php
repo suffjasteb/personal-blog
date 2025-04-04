@@ -24,3 +24,7 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 
 // /posts/{id} → {id} adalah parameter untuk menangkap ID postingan yang diklik.
 // PostController@show → Nanti fungsi show() di PostController akan menangani permintaan ini.
+
+Route::get('/about', function() {
+    return view('about');
+});

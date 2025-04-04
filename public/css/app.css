@@ -15,9 +15,31 @@
     background-size: cover;
 }
 
+
+
 .profile-text {
-    background-color: #d9ae97; /* Warna beige */
-    padding: 40px;
-    text-align: center;
-    font-style: italic;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.profile-text p {
+    font-size: 30px;
+    color: #333;
+}
+
+.read-more {
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.read-more:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(133, 133, 133);
 }

@@ -36,7 +36,7 @@ class PostController extends Controller
             'content' => 'required',
             'category' => 'required',
             'author_name' => 'required',
-            'image' => 'nullable|image|max:2048'
+            'image' => 'nullable|image|max:20480', // 20480 KB = 20 MB
         ]);
 
         $imagePath = $request->file('image') ? $request->file('image')->store('images', 'public') : null;
