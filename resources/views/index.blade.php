@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+    {{-- font awesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Personal Blog</title>
   </head>
   <body class="h-full bg-black">
@@ -27,22 +29,14 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active ">
                   <a class="nav-link" href="/admin">create</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Category
-                  </a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Technology</a>
-                    <a class="dropdown-item" href="#">Finance</a>
-                    <a class="dropdown-item" href="#">Jobs</a>
-                    <a class="dropdown-item" href="#">News</a>
-                  </div>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="/about">About</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/course">Course<span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -115,10 +109,48 @@
     </div>
   </div>
 </div>
+      {{-- project --}}
 
+      <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Project</h2>
+        <div class="row">
+          {{-- 1 --}}
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm d-flex flex-column">
+              <img src="{{asset("img/todo.png")}}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title" >Task Manager with Laravel 11</h5>
+                <p class="card-text flex-grow-1 ">A basic task manager to create, mark, and delete tasks. Built during my Laravel learning journey.</p>
+                <a href="#" class="btn btn-primary btn-sm mt-auto ">View Project</a>
+              </div>
+            </div>
+          </div>
+          {{-- 2 --}}
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm d-flex flex-column">
+              <img src="{{asset("img/movie-app.png")}}">
+              <div class="card-body d-flex flex-column ">
+                <h5 class="card-title" >Movie Search App using PHP</h5>
+                <p class="card-text flex-grow-1">A simple movie search app using external API and native PHP. My first dynamic web app.</p>
+                <a href="#" class="btn btn-primary btn-sm mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+          {{-- 3 --}}
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm d-flex flex-column">
+              <img src="{{asset("img/card-fe.png")}}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title" >Developer Profile Card UI</h5>
+                <p class="card-text flex-grow-1">A stylish and responsive profile card designed with HTML and CSS for practice.</p>
+                <a href="#" class="btn btn-primary btn-sm mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
-
-
+      </div>
+        </div>
+        
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
