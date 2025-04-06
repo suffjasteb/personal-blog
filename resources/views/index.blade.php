@@ -111,7 +111,7 @@
 </div>
       {{-- project --}}
 
-      <div class="container my-5">
+      <div class="container my-5" id="projects">
         <h2 class="text-center mb-4">Featured Project</h2>
         <div class="row">
           {{-- 1 --}}
@@ -149,6 +149,55 @@
           </div>
         </div>
       </div>
+        </div>
+
+        {{-- footer --}}
+        <div class="bg-dark text-white pt-5 pb-4" id="contact">
+          <div class="container text-md-left">
+            <div class="row text-md-left">
+
+              <!-- Kolom 1: Tentang -->
+              <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-success" >Shafwan Junindra</h5>
+                <p>Backend Developer yang suka explore teknologi dan membagikan proses belajar lewat blog pribadi.</p>
+              </div>
+
+                <!-- Kolom 2: Link -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-primary" >Quick Links</h5>
+                  <p><a href="/" class="text-white" style="text-decoration: none;">Home</a></p>
+                  <p><a href="/about" class="text-white" style="text-decoration: none;">About</a></p>
+                  <p><a href="#projects" class="text-white" style="text-decoration: none;">Projects</a></p>
+                  <p><a href="#contact" class="text-white" style="text-decoration: none;">Contact</a></p>
+                </div>
+
+                {{-- contact --}}
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning ">Contact</h5>
+                  <p><i class="fas fa-home mr-3"></i> Sidoarjo, Indonesia</p>
+                  <p><i class="fas fa-envelope mr-3"></i> shafwanjunindra@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> +62 812-5285-9954</p>
+                </div>
+
+                {{-- sosial media --}}
+                <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase text-danger font-weight-bold mb-4 ">Follow Me</h5>
+                  <a href="https://github.com/suffjasteb" class="text-white mr-4">
+                    <i class="fab fa-github fa-lg"></i>
+                  </a>
+                  <a href="https://instagram.com/shafwanjunindra" class="text-white mr-4">
+                    <i class="fab fa-instagram fa-lg"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/shafwanjunindra" class="text-white mr-4">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                  </a>
+                  <a href="#shafwanjunindra@gmail.com" class="text-white">
+                    <i class="fas fa-envelope fa-lg"></i>
+                  </a>
+                </div>
+
+            </div>
+          </div>
         </div>
         
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
